@@ -1,0 +1,27 @@
+<div class="row bg-success">
+    <div class="col-6 text-end text-light">
+        <h3>Quiz App for learners</h3>
+    </div>
+    <div class="col-5 text-end">
+        <span *ngIf="userInfo">Welcome: {{userInfo.firstName | uppercase}}</span>
+        <button *ngIf="!userInfo" (click)="navigateToSignUp();" type="button" class="btn btn-light">Sign-Up</button>
+
+        <button *ngIf="!userInfo" (click)="navigateToLogin();" type="button" class="btn btn-light"
+            style="margin-left: 5px;">Login</button>
+        <button *ngIf="userInfo" (click)="logout()" type="button" style="margin-left: 5px;" class="btn btn-light">logout</button>
+    </div>
+    <div class="col-1">
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

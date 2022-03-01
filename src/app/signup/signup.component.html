@@ -1,0 +1,46 @@
+
+<div class="row">
+  <div class="col-3"></div>
+  <div class="col-6">
+    <form #signup="ngForm" (ngSubmit)="submit(signup.value)" >
+      <h3 style="text-align: center;">Sign up</h3>
+      <div class="form-group">
+        <label for="FirstName">First Name </label>
+        <input type="text" class="form-control" id="firstName" placeholder="Enter FirstName" [(ngModel)]="loginForm.firstName" name="firstName" #firstName="ngModel" required>
+      </div>
+      <div class="form-group">
+        <label for="LastName">Last Name</label>
+        <input type="text" class="form-control" id="LastName" placeholder="Enter LastName" [(ngModel)]="loginForm.lastName" name="lastName" #lastName="ngModel" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label><br>
+        <select class="custom-select" id="gender" [(ngModel)]="loginForm.gender" name="gender" #name="ngModel" required>
+          <option selected>Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Others">Others</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="loginForm.email" name="email" #email="ngModel" required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" [(ngModel)]="loginForm.password" #email="ngModel" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">confirm password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="confirm password" name="confirmPassword" [(ngModel)]="loginForm.confirmPassword" #confirmPassword="ngModel" required>
+      </div>
+      <button style="margin-top: 5px;" type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+        Submit
+      </button>
+      <h5 *ngIf="signupResponse" style="color: green;">User Created Successfully</h5>
+      <h5 *ngIf="signupError" style="color: red;">An error Occured</h5>
+    </form>
+  </div>
+  <div class="col-3"></div>
+</div>
