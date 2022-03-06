@@ -1,13 +1,13 @@
-<div class="row bg-success">
+<div class="row bg-success" style="font-family: 'Times New Roman', Times, serif;">
     <div class="col-6 text-end text-light">
         <h3>Quiz App for learners</h3>
     </div>
-    <div class="col-5 text-end">
+    <div class="col-5 text-end" style="margin-top: 3.5px;">
         <span *ngIf="userInfo">Welcome: {{userInfo.firstName | uppercase}}</span>
-        <button *ngIf="!userInfo" (click)="navigateToSignUp();" type="button" class="btn btn-light">Sign-Up</button>
+        <button *ngIf="!userInfo" (click)="navigateToSignUp();" type="button" class="btn btn-light" style="border: none;">Sign-Up</button>
 
         <button *ngIf="!userInfo" (click)="navigateToLogin();" type="button" class="btn btn-light"
-            style="margin-left: 5px;">Login</button>
+            style="margin-left: 5px; border: none;">Login</button>
         <button *ngIf="userInfo" (click)="logout()" type="button" style="margin-left: 5px;" class="btn btn-light">logout</button>
     </div>
     <div class="col-1">

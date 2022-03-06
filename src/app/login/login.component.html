@@ -1,22 +1,23 @@
 
 <div class="row">
-    <div class="col-3"></div>
-    <div class="col-6">
+    <div class="col-4"></div>
+    <div class="col-4" style="font-family:'Times New Roman', Times, serif;">
         <form #login="ngForm" (ngSubmit)="submit(login.value)">
           <h3 style="text-align: center;">Login</h3>
-          <h4 *ngIf="error" style="color: red;">Email id or password is in correct</h4>
-            <div class="form-group">
+          <h4 *ngIf="error" style="color: red; font-family: 'Times New Roman', Times, serif;">Email id or password is in correct</h4>
+            <div class="form-group" >
               <label for="exampleInputEmail1">Email address</label>
               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" [(ngModel)]="loginCredential.email" #email="ngModel">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
-            <div class="form-group">
+            <div class="form-group" style="border: none; border-radius: 1px;">
               <label for="exampleInputPassword1">Password</label>
               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" [(ngModel)]="loginCredential.password" #password="ngModel">
             </div>
-
-            <button style="margin-top: 5px;" type="submit" class="btn btn-primary">Submit</button>
+            <div class="d-grid gap-3">
+              <button style="margin-top: 5px;" type="submit" class="btn btn-primary btn-block">login</button>
+            </div>
           </form>
     </div>
-    <div class="col-3"></div>
+    <div class="col-4"></div>
 </div>

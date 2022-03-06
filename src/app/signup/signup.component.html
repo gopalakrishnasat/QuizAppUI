@@ -1,7 +1,7 @@
 
 <div class="row">
   <div class="col-3"></div>
-  <div class="col-6">
+  <div class="col-6" style="font-family: 'Times New Roman', Times, serif;">
     <form #signup="ngForm" (ngSubmit)="submit(signup.value)" >
       <h3 style="text-align: center;">Sign up</h3>
       <div class="form-group">
@@ -35,9 +35,12 @@
         <label for="exampleInputPassword1">confirm password</label>
         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="confirm password" name="confirmPassword" [(ngModel)]="loginForm.confirmPassword" #confirmPassword="ngModel" required>
       </div>
-      <button style="margin-top: 5px;" type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
-        Submit
-      </button>
+      <div class="d-grid gap-3">
+        
+        <button style="margin-top: 5px;" type="submit" class="btn btn-primary btn-block" data-toggle="button" aria-pressed="false" autocomplete="off">
+          Sign Up
+        </button>
+      </div>
       <h5 *ngIf="signupResponse" style="color: green;">User Created Successfully</h5>
       <h5 *ngIf="signupError" style="color: red;">An error Occured</h5>
     </form>

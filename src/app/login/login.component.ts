@@ -20,14 +20,14 @@ export class LoginComponent implements OnInit {
       console.log("login details submitted",login)
       this.service.userLogin(login).subscribe((res:any) => {
         if(res){
-          this.service.userInfo.next(res.data)
+          this.service.userInfo.next(res.data);
           localStorage.setItem('token',res.token);
-          this.router.navigate(['/userDashboard'])
-          this.token = res.token
-          this.isAuthenticated =true
+          this.router.navigate(['/userDashboard']);
+          this.token = res.token;
+          this.isAuthenticated =true;
         }
       },(error)=>{
-        console.log(error)
+        console.log(error);
         this.error = error;
       })
     }
